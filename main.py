@@ -34,5 +34,7 @@ if file is not None:
     class_name, conf_score = classify(image, model, class_names)
 
     # write classification
-    st.write("## {}".format(class_name))
+    # st.write("## {}".format(class_name))
+    result = '<p style="font-family:sans-serif; color:Green; font-size: 42px;">{class_name}}</p>'
+    st.markdown(result, unsafe_allow_html=True)
     st.write("### score: {}%".format(int(conf_score * 1000) / 10))
