@@ -12,7 +12,7 @@ set_background('./imgs/chest-x-ray.jpeg')
 st.title('Pneumonia classification')
 
 # set header
-st.header('Please upload a chest X-ray image')
+st.header(' Upload a chest X-ray image')
 
 # upload file
 file = st.file_uploader('', type=['jpeg', 'jpg', 'png'])
@@ -34,7 +34,6 @@ if file is not None:
     class_name, conf_score = classify(image, model, class_names)
 
     # write classification
-    # st.write("## {}".format(class_name))
-    result = '<p style="font-family:sans-serif; color:Green; font-size: 42px;">{class_name}}</p>'
-    st.markdown(result, unsafe_allow_html=True)
+    st.write("## {}".format(class_name))
     st.write("### score: {}%".format(int(conf_score * 1000) / 10))
+    st.text_input(r"$\textsf{\Large Enter text here}$")
