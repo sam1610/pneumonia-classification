@@ -34,6 +34,6 @@ if file is not None:
     class_name, conf_score = classify(image, model, class_names)
 
     # write classification
-    st.write(f"##  {class_name}")
-    st.write("### score: {}%".format(int(conf_score * 1000) / 10))
+    st.write(f"##  :blue[{class_name}]")
+    st.write("### score:  :red[{int(conf_score * 1000) / 10:3}]")
     st.write(r"$\textsf{\Large Enter text here}$")
