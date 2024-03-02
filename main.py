@@ -36,5 +36,5 @@ if file is not None:
     # write classification
     st.write(f"##  :blue[{class_name}]")
     score=int(conf_score * 1000) / 10
-    st.write(f"### score:  :red[{score}]")
+    st.write(f"### :blue[score:]  :red[{score}]")
     # st.write(r"$\textsf{\Large Enter text here}$")
